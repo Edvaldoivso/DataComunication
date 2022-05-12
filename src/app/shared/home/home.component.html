@@ -1,6 +1,22 @@
-<h1>Home Teste Input Output</h1>
-
+<hr />
+<h1>Home Teste Input Iutput</h1>
 <app-input [contador]="addValue"></app-input>
-<br>
-<br>
-<button (click)="Add()">Soma Valor</button>
+<br />
+<button (click)="Add()">Soma Valor</button> {{ "  " }}
+<button (click)="Rem()">Subtrai Valor</button>
+<br />
+<hr />
+
+
+
+<h1>Home Teste de Output</h1>
+<ng-template [ngIf]="getDados">
+  <h1>{{ getDados.nome }}</h1>
+  <h2>{{ getDados.idade }}</h2>
+</ng-template>
+<br />
+<hr />
+
+
+<app-output ( enviarDados )="setDados($event)"></app-output>
+<hr />
